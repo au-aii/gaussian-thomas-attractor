@@ -119,3 +119,7 @@ npm run dev
 - [ ] フェーズ1: 点群表示 + OrbitControls
 - [ ] フェーズ2: Gaussian Splat シェーダー + Additive Blending
 - [ ] フェーズ3: カラーマッピング + Bloom + FilmPass
+
+
+## 📚 参考URL
+https://www.instagram.com/reel/DYsSz2rvWGI
