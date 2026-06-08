@@ -116,7 +116,7 @@ npm run dev
 
 ## 📌 進捗
 
-- [ ] フェーズ1: 点群表示 + OrbitControls
+- [x] フェーズ1: 点群表示 + OrbitControls
 - [ ] フェーズ2: Gaussian Splat シェーダー + Additive Blending
 - [ ] フェーズ3: カラーマッピング + Bloom + FilmPass
 

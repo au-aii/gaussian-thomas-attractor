@@ -9,14 +9,14 @@
 
 ### 手順
 
-- [ ] Three.js の3点セットを用意（Scene / PerspectiveCamera / WebGLRenderer）
-- [ ] Thomas の計算ループで座標を貯める（`次の位置 = 今の位置 + 速度 × dt` を数万回）
+- [x] Three.js の3点セットを用意（Scene / PerspectiveCamera / WebGLRenderer）
+- [x] Thomas の計算ループで座標を貯める（`次の位置 = 今の位置 + 速度 × dt` を数万回）
   - `x += (sin(y) − b·x)·dt` / `y += (sin(z) − b·y)·dt` / `z += (sin(x) − b·z)·dt`
   - 初期値 `(0.1, 0.0, 0.0)`、`b = 0.1992`、`dt = 0.05`
-- [ ] 座標配列を `BufferGeometry` の position 属性に流す
-- [ ] `PointsMaterial`（まずは四角いドット）で `Points` を作って scene に追加
-- [ ] `OrbitControls` を入れてマウスで回せるようにする
-- [ ] requestAnimationFrame で描画ループ＋リサイズ対応
+- [x] 座標配列を `BufferGeometry` の position 属性に流す
+- [x] `PointsMaterial`（まずは四角いドット）で `Points` を作って scene に追加
+- [x] `OrbitControls` を入れてマウスで回せるようにする
+- [x] requestAnimationFrame で描画ループ＋リサイズ対応
 
 ### 制約
 
@@ -25,8 +25,8 @@
 
 ### 完了条件（チェックポイント）
 
-- [ ] 「ドーナツが絡み合ったような3Dの形」がドットで表示される
-- [ ] マウスで自由に回転できる
+- [x] 「ドーナツが絡み合ったような3Dの形」がドットで表示される
+- [x] マウスで自由に回転できる
 
 ### 書く前のセルフチェック（MATH.md 参照）
 
