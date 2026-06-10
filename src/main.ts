@@ -49,7 +49,8 @@ const material = new THREE.ShaderMaterial({
     void main() {
       float r = distance(gl_PointCoord, vec2(0.5));
       float g = exp(-r * r * 10.0);
-      gl_FragColor = vec4(vec3(g), g);
+      vec3 color = vec3(0.5, 0.7, 1.0);
+      gl_FragColor = vec4(color * g, g);
     }
   `,
   })
