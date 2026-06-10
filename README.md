@@ -3,8 +3,7 @@
 カオス理論の **Thomas' cyclically symmetric attractor（トーマス・アトラクター）** を、
 TypeScript + Three.js で **3D Gaussian Splatting 風**に描画するアートプロジェクト。
 
-「計算」と「描画」を最初から分離せず、**1つの環境（ブラウザ）で完結させ、徐々に自作パートを増やす**
-タイパ最優先の戦略で進める。本書はその進行ガイド（Steering File）。
+「計算」と「描画」を最初から分離せず、**1つの環境（ブラウザ）で完結させ、徐々に自作パートを増やす**戦略で進める。本書はその進行ガイド（Steering File）。
 
 ![Thomas Attractor](thomas-1.png)
 
