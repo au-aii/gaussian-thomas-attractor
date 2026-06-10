@@ -35,7 +35,25 @@ const geometry = new THREE.BufferGeometry()
 geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
 // 3. material renderer
-const material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.05 })
+const material = new THREE.ShaderMaterial({
+  blending: THREE.AdditiveBlending,
+  depthWrite: false,
+  transparent: true,
+  vertexShader: /* glsl */`
+    void main() {
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      gl_PointSize = 3.0;
+    }
+  `,
+  fragmentShader: /* glsl */`
+    void main() {
+      float r = distance(gl_PointCoord, vec2(0.5));
+      float g = exp(-r * r * 10.0);
+      gl_FragColor = vec4(vec3(g), g);
+    }
+  `,
+  })
+
 const points = new THREE.Points(geometry, material)
 scene.add(points)
 
