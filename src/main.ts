@@ -10,7 +10,7 @@ const positions = new Float32Array(N * 3)
 
 let x = 0.1, y = 0, z = 0
 
-for　(let i = 0; i < N; i++) {
+for (let i = 0; i < N; i++) {
   const nx = x +(Math.sin(y) - b * x)*dt
   const ny = y + (Math.sin(z) - b * y)*dt
   const nz = z + (Math.sin(x) - b * z)*dt
