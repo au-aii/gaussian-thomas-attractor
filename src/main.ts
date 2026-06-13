@@ -71,10 +71,20 @@ scene.add(points)
 // 4. orbitcontrols
 const controls = new OrbitControls(camera, renderer.domElement)
 
+const clock = new THREE.Clock()
+
 // 5. animation loop
 function animate() {
   requestAnimationFrame(animate)
-  controls.update()
+  //controls.update()
+  const t = clock.getElapsedTime()
+
+const radius = 8
+camera.position.x = radius * Math.cos(t * 0.3)
+camera.position.z = radius * Math.sin(t * 0.5)
+camera.position.y = radius * Math.sin(t * 0.7)
+camera.lookAt(0, 0, 0)
+
   composer.render()
 }
 animate()
