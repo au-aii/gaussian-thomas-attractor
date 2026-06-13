@@ -128,8 +128,10 @@ npm run dev
 
 - [x] フェーズ1: 点群表示 + OrbitControls
 - [x] フェーズ2: Gaussian Splat シェーダー + Additive Blending
-- [ ] フェーズ3: カラーマッピング + Bloom + FilmPass
+- [x] フェーズ3: カラーマッピング + Bloom（FilmPass は見送り）
+- [x] カメラ自動回転
 
-## 📚 参考URL
+## 🙏 クレジット
 
-https://www.instagram.com/reel/DYsSz2rvWGI
+- **着想:** [Instagram のリール](https://www.instagram.com/reel/DYsSz2rvWGI)
+- **実装:** TypeScript + Three.js でゼロから自作（オイラー法による軌道計算・GLSL シェーダー・カメラワーク）
