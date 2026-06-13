@@ -1,7 +1,9 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+ 
 
 const N = 500000
 const b = 0.1993
@@ -55,8 +57,16 @@ const material = new THREE.ShaderMaterial({
   `,
   })
 
+
 const points = new THREE.Points(geometry, material)
 scene.add(points)
+
+  const composer = new EffectComposer(renderer)
+  composer.addPass(new RenderPass(scene, camera))
+  composer.addPass(new UnrealBloomPass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    0.01, 0.4, 0.85
+  ))
 
 // 4. orbitcontrols
 const controls = new OrbitControls(camera, renderer.domElement)
@@ -65,6 +75,6 @@ const controls = new OrbitControls(camera, renderer.domElement)
 function animate() {
   requestAnimationFrame(animate)
   controls.update()
-  renderer.render(scene, camera)
+  composer.render()
 }
 animate()
